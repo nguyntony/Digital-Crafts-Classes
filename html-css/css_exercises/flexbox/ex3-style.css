@@ -1,0 +1,23 @@
+.chessboard {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.col {
+    background-color: rgb(199, 174, 146);
+    width: 100px;
+    height: 100px;
+}
+
+.row {
+    display: flex;
+}
+
+.row:nth-child(odd) > .col:nth-child(even) {
+    background-color: rgb(146, 111, 79);
+}
+
+.row:nth-child(even) > .col:nth-child(odd) {
+    background-color: rgb(146, 111, 79);
+}

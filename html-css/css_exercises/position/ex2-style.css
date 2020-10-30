@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+}
+
+.header {
+    top: 0;
+    position: fixed;
+    background-color: palegoldenrod;
+    width: 100%;
+}
+
+p:first-child {
+    margin-top: 25px;
+}

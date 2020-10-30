@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.parent {
+    height: 100vh;
+    border: 20px solid black;
+    display: flex;
+    /* ^ this changes the parent into a flex container, the children will now go left to right */
+    /* flex-direction: column; */
+    /* ^ this changes the main axis, the default when applying display: flex will have the children go left and right but this will make the children go vertically (up and down) */
+}
+
+.child1 {
+    width: 200px;
+    height: 200px; 
+    /* ^ this value here is what makes the blue box stop at a specific height, if I remove it, it will grow to as much content that there is in the child. */
+    background-color: cornflowerblue;
+    overflow: scroll;
+    /* ^ this needs to be applied here in the parent container to affect the content, it will not let the content go over the div and it will scroll */
+    color: white;
+    /* display: flex; */
+    /* ^ this is currently not needed here. if all we want to do is align the text to be centered. */
+    text-align: center;
+}
+
+.child2 {
+    width: 200px;
+    height: 200px;
+    background-color: palegoldenrod;
+}
+
+.child3 {
+    width: 200px;
+    height: 200px;
+    background-color: plum;
+}
+
+.child {
+    flex: 1 1 auto;
+}

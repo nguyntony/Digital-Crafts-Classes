@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+}
+
+.parent-container {
+    display: flex;
+    border: 1px solid black;
+    height: 50vh;
+}
+
+.col {
+    border: 1px solid black;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.col1 {
+    height: 25%;
+    border: 1px solid black;
+    flex: 1;
+    /* display: flex;
+    flex-direction: row; */
+}
+
+.first {
+    border: -1px solid black;
+    /* display: flex; */
+    flex: 1;
+    height: 25%;
+}
+
+div > .second {
+    display: flex;
+    flex: 1;
+    height: 50%;
+    border: 1px solid black;
+    flex-direction: row;
+}
+
+.double {
+    flex: 2;
+}
+
+/* .row-double {
+    height: 50%;
+} */
+
+.blue {
+    background-color: cornflowerblue;
+}
+
+.yellow {
+    background-color: palegoldenrod;
+}
+
+.red {
+    background-color: rgb(204, 114, 114);
+}

@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+label, input {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px){
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    label, input {
+        display: block;
+    }
+
+    nav {
+        height: 50px;
+        background:rgb(157, 172, 127);
+    }
+
+    nav h1 {
+        position: absolute;
+        width: 200px;
+        top: 8px;
+        left: 10%;
+        color: #fff;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    nav ul {
+        float: right;
+        margin-right: 25px;
+        list-style: none;
+    }
+
+    nav ul li {
+        display: inline-block;
+        line-height: 50px;
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        position: relative;
+        padding: 5px 0;
+        color: #fff;
+        font-size: 18px;
+        text-decoration: none;
+    }
+
+    label #sign-one,
+    label #sign-two {
+        font-size: 30px;
+        color: #fff;
+        float: left;
+        padding-left: 5px;
+        line-height: 50px;
+        margin-right: 30px;
+        cursor: pointer;
+        display: none;
+    }
+
+    #res-menu {
+        display: none;
+    }
+
+    .nav-area {
+        background: linear-gradient(to right, rgb(0,0,0, 0.6), rgb(0, 0, 0, 0.6)), url(images/pngfind.com-cherry-blossom-tree-png-134495.png);
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center center;
+        height: 100vh;
+        background-color: rgb(217, 226, 200);
+    }
+
+    .nav-text {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -o-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .nav-text h2 {
+        color: rgb(241, 240, 205);
+        margin-top: -140px;
+        font-size: 46px;
+        text-align: center;
+    }
+
+    .nav-text p {
+        color: rgb(241, 240, 205);
+        margin: 0 25px;
+        padding-bottom: 50px;
+        text-align: center;
+    }
+
+    .nav-text button {
+        border-radius: 10px;
+        background: rgb(157, 172, 127);
+        padding: 10px 15px;
+        border: none;
+        font-size: 25px;
+        color: rgb(241, 240, 205);
+        font-weight: 600;
+    }
+}
+@media (max-width: 600px){
+    label #sign-one {
+        display: block;
+    }
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgb(112, 123, 91);
+        top: 50px;
+        left: -100%;
+        text-align: center;
+        transition: .5s;
+        z-index: 10;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+    nav ul li {
+        display: block;
+        margin: 40px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    #res-menu:checked ~ ul {
+        left: 0;
+    }
+    #res-menu:checked ~ label #sign-one{
+        display: none;
+    }
+    #res-menu:checked ~ label #sign-two{
+        display: block;
+    }
+}

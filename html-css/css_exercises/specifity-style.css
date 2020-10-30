@@ -1,0 +1,29 @@
+body{
+    font-family: arial;
+}
+
+h1{
+    font-family: normal;
+    text-decoration: underline;
+}
+
+li {
+    background-color: rgb(240, 227, 162, 0.8);
+}
+
+section {
+    font-weight: bold;
+}
+
+.active {
+    /* width | style | color */
+    border: 1.5px solid black;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+section.active {
+    display: inline-block;
+}

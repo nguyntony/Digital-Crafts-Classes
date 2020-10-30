@@ -1,0 +1,17 @@
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding-top: 65px;
+}
+
+.blogpost {
+    position: relative;
+    left: 100px;
+}
+
+h1 {
+    position: relative;
+    left: 100px;
+}
