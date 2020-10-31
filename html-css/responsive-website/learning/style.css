@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.parent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    /* border: 3px solid red; */
+}
+
+nav {
+    background-color: rgb(56, 75, 64);
+    height: 50px;
+    /* ^ setting the height here will allow me to call flex grow for the other layout */
+    display: flex;
+    /* here I need to call df because if I don't the content within this nav class will not respect the dimensions of it. If I remove this then the items will go pass the respected dimensions. */
+    justify-content: space-between;
+    color: rgb(227, 226, 195);
+}
+
+nav ul {
+    /* ul is considered a block element/another container so I need to call display flex here not in nav */
+    display: flex;
+    list-style: none;
+    /* so here I am able to call this here is because the li elements are a direct/1level deep children of ul */
+    /* BUT if I wanted padding between the list items I need to call the children themselves to have padding */
+    align-items: center;
+    /* here I call align items because I want to deal with the cross axis and I want the list items to be in the center of the nav bar. */
+    font-weight: 600;
+    font-size: 18px;
+}
+
+ul li {
+    /* padding: 0 15%; */
+    /* ^ using padding here caused the links to push outside of the width of the whole website. */
+    margin: 0 15px;
+    /* ^ using margin here, respected the dimensions of the website and it gave a space between links. */
+}
+li a {
+    color: rgb(227, 226, 195);
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    z-index: 3;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 32px;
+}
+
+
+
+.layout {
+    background-color: rgb(182, 144, 182);
+    /* background-image: url(./images/tree-wallpaper.jpeg); */
+    background: linear-gradient(to right, rgba(54, 54, 54, 0.2), rgb(54,54,54, 0.2)), url(./images/tree-wallpaper.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    /* flex-direction: column; */
+    /* ^ I can all this here to turn the children go up and down. */
+    flex: 1;
+    /* ^ calling this here will allow the layout take up the remaining space of the container. */
+    justify-content: center;
+    align-items: center;
+}
+
+.child {
+    display: flex;
+    /* calling the flex here is for the children in the layout class */
+    /* flex: 1; */
+    /* ^ I'm giving it flex 1 so that both children will grow to the be the same size. */
+    max-width: 400px;
+    min-height: 400px;
+    background-color: rgb(56, 75, 64, 0.9);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 55px;
+    color: rgb(227, 226, 195);
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: 10px 10px 9px rgb(0, 0, 0, 0.8);
+}
+
+
+.child h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+button {
+    border: none;
+    border-radius: 35px;
+    padding: 8px 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: rgb(128, 164, 111);
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+}
+
+.two {
+    /* background-color: rgb(201, 147, 138); */
+}
+
+@media (max-width: 1000px) {
+    nav {
+        height: 50px;
+    }
+}
+
+@media (max-width: 600px) and (max-height: 800px) {
+    nav {
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul {
+        z-index: 1;
+        position: relative;
+        /* top: 5px; */
+        justify-content: center;
+        color: rgb(248, 245, 221);
+        background-color: rgb(191, 212, 141);
+        padding: 5px;
+    }
+    
+    .logo {
+        width: 40px;
+        align-content: center;
+        font-size: 24px;
+    }
+
+    .parent {
+        /* height: 100%; */
+        /* here I needed to change the height of the parent to be 100% of the content inside of the contents. */
+    }
+
+    .layout {
+        background: linear-gradient(to right, rgba(54, 54, 54, 0.2), rgb(54,54,54, 0.2)), url(./images/attempt_mobile.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        /* flex-direction: column; */
+        /* height: 100vh; */
+    }
+
+    .child {
+        /* flex: unset; */
+        /* ^ so here, I had to unset the flex because this was predefined above and I need to unset it otherwise the children will continue to split the screen evenly*/
+        /* align-items: center; */
+        /* height: 800px; */
+        
+    }
+
+    .child {
+        /* height: 50%; */
+        /* if I wanted the height to be a set amount I can do that here. */
+        min-width: 100px;
+        min-height: 200px;
+        padding: 20px 30px;
+    }
+
+    .two {
+        /* height: 800px; */
+        /* I can establish a height here too so that the other child will have some space too for whatever. */
+    }
+}
+
+@media (max-width: 600px) and (max-height: 1000px) {
+    nav {
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul {
+        z-index: 1;
+        /* position: relative; */
+        /* top: 5px; */
+        justify-content: center;
+        color: rgb(248, 245, 221);
+        background-color: rgb(149, 165, 111);
+        padding: 3px;
+        /* font-size: 18px; */
+    }
+
+    .child {
+        /* height: 50%; */
+        /* if I wanted the height to be a set amount I can do that here. */
+        max-width: 300px;
+        max-height: 500px;
+        padding: 20px 30px;
+    }
+    
+}
+
+/* @media (max-width: 400px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    nav ul {
+        z-index: 1;
+    }
+} */
