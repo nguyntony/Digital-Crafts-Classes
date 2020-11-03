@@ -1,0 +1,22 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    font-size: 170px;
+    font-weight: 900;
+}
+
+h1 span {
+    color: wheat;
+}
+
+
+h1 .clear {
+    background: url(../learning/images/tree-wallpaper.jpeg);
+    background-size: cover;
+    background-position: 30% 70%;
+    background-repeat: no-repeat;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}

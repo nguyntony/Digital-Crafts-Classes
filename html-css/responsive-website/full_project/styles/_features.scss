@@ -10,7 +10,7 @@
         position: absolute;
         // however here, this interacts with the position relative of the parent because now we can make this absolute and move it on top of the position relative parent. we are moving the image with the values below. 
         left: 0;
-        bottom: -25%;
+        bottom: -15%;
         width: 100%; 
         // stretches the background to be the full width of the viewport
         z-index: -1;

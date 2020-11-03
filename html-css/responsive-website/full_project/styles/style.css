@@ -173,7 +173,7 @@ nav .order {
 .features-container .wave {
   position: absolute;
   left: 0;
-  bottom: -25%;
+  bottom: -15%;
   width: 100%;
   z-index: -1;
 }
@@ -288,7 +288,7 @@ footer h1 {
           flex: 3;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   html {
     font-size: 50%;
   }
