@@ -11,3 +11,5 @@ function printSquare(num) {
 }
 
 printSquare(10)
+
+// you can also do this exericse using string.repeat()

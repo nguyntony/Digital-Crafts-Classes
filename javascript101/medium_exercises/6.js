@@ -18,4 +18,4 @@ function printBox(width, height) {
     console.log(topBottom)
 }
 
-printBox(10, 8)
+printBox(7, 7)
