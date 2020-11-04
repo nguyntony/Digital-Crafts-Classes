@@ -1,4 +1,4 @@
-function cipher(message, offset) {
+function decipher(message, offset) {
     let result = ""
 
     for (letter in message) {
@@ -8,16 +8,16 @@ function cipher(message, offset) {
 
         if (code > 64 && code < 91) {
             // this is the checker for capital letters and this is for unicode
-            code += offset
-            while (code > 90) {
-                code = 64 + (code - 90)
+            code -= offset
+            while (code < 65) {
+                code = 91 - (65 - code)
             }
 
         } else if (code > 96 && code < 123) {
             // this is the checker for lowercase letters and this is for unicode
-            code += offset
-            while (code > 122) {
-                code = 96 + (code - 122)
+            code -= offset
+            while (code < 97) {
+                code = 123 - (97 - code)
             }
         }
         result += String.fromCharCode(code)
@@ -25,5 +25,4 @@ function cipher(message, offset) {
     console.log(result)
 }
 
-
-console.log("abc".charCodeAt(1))
+decipher("za lzwjw", 200)
