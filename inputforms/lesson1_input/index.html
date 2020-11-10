@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <label for="username">Username</label>
+    <input type="text" id="username" placeholder="Username!!!!!">
+
+    <p>If you check this box, that means you understand the terms and agree with them.</p>
+    <label for="Agree?">Do you agree?</label>
+    <input type="checkbox" value="IAgree" name="Agree?">
+
+    <div class="checkbox-group">
+        What pets do you have?
+        <label for="dogbox">Dog<input type="checkbox" name="pet" id="dogbox"></label>
+        <label for="catbox">Cat<input type="checkbox" name="pet" id="catbox"></label>
+        <label for="birdbox">Bird<input type="checkbox" name="pet" id="birdbox"></label>
+        <label for="hamsterbox">Hamster<input type="checkbox" name="pet" id="hamsterbox"></label>
+    </div>
+
+    <input type="search" id="search" placeholder="Search...">
+
+    <div class="radio-group">
+        <label for="dogradio">Dog <input type="radio" name="pet" id="dogradio"></label>
+        <label for="catradio">Cat <input type="radio" name="pet" id="catradio"></label>
+        <label for="birdradio">Bird <input type="radio" name="pet" id="birdradio"></label>
+        <label for="hamsterradio">Hamster <input type="radio" name="pet" id="hamsterradio"></label>
+    </div>
+
+    <label for="favorite-color">fav color</label>
+    <select name="favorite-color" id="favorite-color">
+        <option value="">-----Select a color-----</option>
+        <optgroup label="Red">
+            <option value="red">Crimson</option>
+            <option value="red">Ruby</option>
+            <option value="red">Fire</option>
+        </optgroup>
+        <optgroup label="Blue">
+            <option value="blue">Cobalt</option>
+            <option value="blue">Saphire</option>
+            <option value="blue">Water</option>
+        </optgroup>
+        <optgroup label="Green">
+            <option value="green">Greensomething</option>
+            <option value="green">Emerald</option>
+            <option value="green">Grass</option>
+        </optgroup>
+    </select>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+html {
+    font-size: 62.5%;
+}
+
+.checkbox-group {
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.checkbox-group label {
+    display: block;
+    margin: 5px 20px;
+}
+
+.checkbox-group label input {
+    position: absolute;
+    left: 0;
+}
+
+.radio-group label {
+    display: block;
+    font-size: 2rem;
+}
+
+#search {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT8cNHDalMZla_1qDZ_Gy0mSqG_q1SyeE-lAw&usqp=CAU);
+    background-position: 5px 20px;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    padding: 20px;
+    padding-left: 40px;
+    font-size: 3rem;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+#search:focus {
+    border: firebrick;
+}
+
+#username {
+    font-size: 20px;
+}
