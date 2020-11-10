@@ -23,7 +23,11 @@ for (let i = 0; i < 5; i++) {
     let listItem = document.createElement("li")
     listItem.append(`list item #${i + 1}`)
     ulist.append(listItem)
+    let styleValue = "color: blue";
+    listItem.style = styleValue
 }
+
+ulist.classList.add("backgroundcolorChange")
 
 let section2 = document.createElement("section")
 section2.id = "attributes"
@@ -49,6 +53,7 @@ let myArr = [
 ]
 
 let ulist2 = document.createElement("ul")
+// ulist2.class = "textcolorChange"
 section2.append(ulist2)
 
 myArr.forEach(function (anchor) {
@@ -62,5 +67,9 @@ myArr.forEach(function (anchor) {
     ulist2.append(item2)
 })
 
+ulist2.classList.add("textcolorChange")
+
+
 // what's happening in this for loop is that we are looping through an array of objects, so we use .forEach() I temporarily created an anchor variable which will act as each object in the array. for each object we want to create a li item and then append an a tag to it (html rules) and then in the a tag we will append the values of the object which is accessed as anchor.attribname 
+
 
