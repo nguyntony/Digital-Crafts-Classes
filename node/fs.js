@@ -10,7 +10,6 @@ fs.readFile("fs_test_file.txt", "utf8", (err, data) => {
     // we can see what the data is
     console.log(typeof data)
     console.log("\n\n")
-
 })
 
 
@@ -18,9 +17,11 @@ fs.readFile("data.json", "utf8", (err, data) => {
     if (err) throw err;
     console.log("this is using a callback fn:")
     let outputData = JSON.parse(data)
-    outputData.forEach((person) => console.log(`${person.name} is ${person.age} years old!`))
-    console.log("\n\n")
-
+    // outputData.forEach((person) => console.log(`${person.name} is ${person.age} years old!`))
+    // console.log("\n\n")
+    for (person of outputData) {
+        console.log(`${person.name} is ${person.age} years old!`)
+    }
 })
 
 let data = fs.readFileSync("data.json", "utf8")
