@@ -2,6 +2,7 @@
   "dependencies": {
     "async": "^3.2.0",
     "bl": "^4.0.3",
-    "moment": "^2.29.1"
+    "moment": "^2.29.1",
+    "through2-map": "^3.0.0"
   }
 }
