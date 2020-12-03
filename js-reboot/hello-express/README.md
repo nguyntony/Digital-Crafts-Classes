@@ -1,13 +1,15 @@
 # Hello Express!
 #express
-- - - -
+
+
 ### Where to start
 - - - -
 1. Create directory for your project
 2. `cd {directory}`  Go into that directory
 3. `npm init -y`  This will create a package.json file in your directory.
 4. In this package.json file, this is where you can configure certain things but it will also serve as a map to let the user know what dependencies there are, etc.
-\
+
+
 ### Installing Modules
 - - - -
 1. `pwd`  Make sure that you are in the desired directory
@@ -15,7 +17,7 @@
 3. IMPORTANT! make sure you create a .gitignore file and add node_modules to that file, you do not want to push this folder onto GitHub!!!
 
 
-### Installing Nodemon
+### Installing Nodemon (Module)
 - - - -
 Nodemon is an express module 
 1. `pwd`  Make sure that you are in your desired directory
