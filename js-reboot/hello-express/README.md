@@ -25,9 +25,12 @@ Nodemon is an express module
 
 **What does that mean?** This is different from installing express because our app runs using express so this will install nodemon in a way that will not install nodemon alongside the initial install when someone tries to install our app. Express is crucial for our app and nodemon is a nice tool but our app does not depend on nodemon to run. However, if they look into our package.json file they will see that we did use nodemon. 
 
-* devDependency vs dependencies: installing nodemon this way (above) will save the module as a devDependency in your package.json file and this is different from a dependency for how we would install express. Nodemon is more so used as a developer tool so it is good practice to make that differentiation in your program.
+* devDependency vs dependencies: 
 
-* using nodemon
+installing nodemon this way (above) will save the module as a devDependency in your package.json file and this is different from a dependency for how we would install express. Nodemon is more so used as a developer tool so it is good practice to make that differentiation in your program.
+
+* using nodemon:
+
 **In your package.json** you can add a key name under the scripts key and set the value to what you would like (ie. `"keyname": "nodemon {filename}"` So now to run that script you can write this in the terminal instead `npm run keyname`
 
 
