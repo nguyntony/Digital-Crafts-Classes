@@ -8,8 +8,28 @@ const port = 3001
 
 app.get("/", (req, res) => {
     res.send("Hello Express")
-})
+});
 
+app.get("/cats", (req, res) => {
+    res.send(`
+    <ul>
+        <li><a href="/cats/taro">Taro</a></li>
+        <li><a href="/cats/mochi">Mochi</a></li>
+    </ul>
+    `)
+})
+// you can "send" html format and res.send will do its best to set the header according to what you send.
+
+
+app.get("/cats/:catName", (req, res) => {
+    const { catName } = req.params;
+    res.send(`
+    hi there, my name is ${catName}
+    <br>
+    <a href="/cats">Return</a>
+    `)
+})
+// here we are using the colon to declare a keyword that will take place in this of the url path. we are grabbing that value from the req obj by doing req.params and we are using destructuring to extract the catName key and we are assigining that to a variable also named catName, notice how catName is the key because that is what we used as our placeholder in the url path. It is also known as a route parameter. 
 
 
 
