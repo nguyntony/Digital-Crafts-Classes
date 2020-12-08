@@ -7,7 +7,7 @@ const app = express();
 const server = http.createServer(app);
 
 const es6Renderer = require("express-es6-template-engine");
-app.engine("html", es6Renderer); // registers the html type.
+app.engine("html", es6Renderer); // registers a new view engine
 app.set("views", "templates"); // what dir do you want it to look in?
 app.set("view engine", "html"); // this is the default file, html
 
@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
     res.render("home");
 });
 
-app.get("/:word", (req, res) => {
+app.get("words/:word", (req, res) => {
     const { word } = req.params;
     res.render("greet", {
         locals: {
@@ -24,5 +24,21 @@ app.get("/:word", (req, res) => {
         },
     });
 });
+
+const people = {
+    chris: "dad",
+    dylanATL: "dylan of atlanta",
+    dylanTampa: "dylan of tampa",
+    jeremy: "super algo master",
+    liz: "mom"
+}
+
+app.get("/people", (req, res) => {
+    res.render('dc-list', {
+        locals: {
+            people: Object.keys(people)
+        }
+    })
+})
 
 server.listen(port, () => console.log(`${host}:${port} is up`));

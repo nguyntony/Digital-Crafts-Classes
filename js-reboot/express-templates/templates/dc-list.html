@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DC People</title>
+</head>
+<body>
+    <h2>dc ppl</h2>
+    <a href="/">go back now</a>
+    <ul>
+        ${
+            people.map(p => `
+            <li><a href="/people/${p}">${p}</a></li>
+            `).join('')
+        }
+        <!-- this is the syntax to put js function inside of an html file. the function of this is to utilize an array and map over each item and give it an li item that will have an anchor tag. and we are using string interpolation to pass information from js to this html file, this is doable through the express template setup -->
+        <!-- note how we are replacing the curly brackets to denote a code block in js is replaced with backticks -->
+        <!-- what is .join('') doing? if we omit the .join('') it will return the comma inside of the people array and it will show in the html file, using .join('') fixes that for us and it will remove those commas. and .join('') is taking the empty string so that the li elements are going to be by themselves. so this will have an array of li elements right next to one another but you can also add \n to have them each li element on their own line -->
+        <!-- this concept thing that we are doing is known as a server-rendered web app/ server-side rendering -->
+    </ul>
+</body>
+</html>

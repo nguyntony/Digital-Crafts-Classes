@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(33, 33, 33);
+    align-items: center;
+}
+
+h1 {
+    color: cornflowerblue;
+    font-size: 2.5rem;
+}
+
+div {
+    color: rgb(142, 175, 236);
+    font-size: 1.5rem;
+    max-width: 50vw;
+}
+
+a {
+    color: tomato;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    list-style: none;
+    padding: 0 1rem;
+}
