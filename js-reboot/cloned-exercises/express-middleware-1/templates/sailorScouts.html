@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sailor Scouts</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Sailor Scouts</h1>
+    <a href="/">Home</a>
+    <ul>
+        ${
+            sailorNames.map((ss) => `
+            <li><a href="/sailorscouts/${ss}">${ss}</a></li>
+            `).join("\n")
+        }
+    </ul>
+</body>
+</html>

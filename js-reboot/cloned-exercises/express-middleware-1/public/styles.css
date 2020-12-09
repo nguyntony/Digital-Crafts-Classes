@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* height: 100vh; */
+    /* position: relative; */
+}
+
+h1 {
+    color: rgb(214, 116, 116);
+    align-self: center;
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    list-style: none;
+    padding: 0 1rem;
+}
+
+a {
+    font-size: 1.5rem;
+}
+
+a:hover {
+    color: tomato;
+}
+
+#img-container,
+#intro {
+    align-self: center;
+}
+
+#logo {
+    max-width: 100vw;
+}
+
+#logo > img {
+    width: 100%;
+}
+
+footer {
+    width: 100vw;
+    height: 60px;
+    background-color: rgb(214, 116, 116);
+    /* position: fixed; */
+    /* bottom: 0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
