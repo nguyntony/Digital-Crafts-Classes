@@ -17,7 +17,11 @@ div {
 }
 
 a {
-    color: tomato;
+    color: mintcream;
+}
+
+a:hover {
+    color: rgb(97, 176, 136);
 }
 
 ul {
@@ -27,4 +31,8 @@ ul {
 li {
     list-style: none;
     padding: 0 1rem;
+}
+
+footer {
+    color: rgb(97, 176, 136);
 }

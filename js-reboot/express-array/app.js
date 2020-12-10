@@ -16,7 +16,11 @@ const path = require("path")
 app.use(express.static(path.join(__dirname, "templates")));
 
 app.get("/", (req, res) => {
-    res.render("home");
+    res.render("home", {
+        partials: {
+            footer: "/partials/footer"
+        }
+    });
 });
 
 app.get("/projects", (req, res) => {
@@ -31,7 +35,6 @@ app.get("/projects", (req, res) => {
 app.get("/projects/:id", (req, res) => {
     const { id } = req.params;
     const project = db.find((p) => p.projectName === id);
-    // const index = db.indexOf(project)
 
     if (project) {
         res.render("project-details", {
