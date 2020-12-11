@@ -1,0 +1,9 @@
+${head}
+<body>
+    ${
+        saleItems.map((product)=> `
+        <li>${JSON.stringify(product)}</li>
+        `).join('')
+    }
+</body>
+</html>
