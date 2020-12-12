@@ -65,6 +65,29 @@ app.get("/items/:id", (req, res) => {
     res.json(target);
 });
 
+app.get("/create", (req, res) => {
+    res.render("form")
+})
+
+let userDB = []
+
+app.post("/create", (req, res) => {
+    const { firstName, lastName, favColor } = req.body
+    let person = {
+        firstName,
+        lastName,
+        favColor
+    }
+    userDB.push(person)
+    console.log(userDB)
+    // res.send("thank you")
+    res.redirect("/thank-you")
+})
+
+app.get("/thank-you", (req, res) => {
+    res.render("thankYou")
+})
+
 server.listen(PORT, HOST, () => {
     console.log(`Listening at`, HOST, PORT);
 });
