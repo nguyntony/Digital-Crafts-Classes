@@ -18,3 +18,7 @@ app.get("/petnames", (req, res) => {
     });
 });
 ```
+
+What is ORM? the ORM translates the req.body or whatever (the developer's code)
+use express to talk http
+use orm to talk to sql
