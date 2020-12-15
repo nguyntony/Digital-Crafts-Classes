@@ -22,11 +22,16 @@ Make sure that you’re in the directory that you want to be in.
 6. “**Password**” will hold the value that we want to put in the password, note the password will be a string (the default is null) 
 7. “**Server**” will hold the value that we want to put in the host (do not include what is in the parentheses, just the url
 8. Insert “postgres” in dialect
-9. `npx sequelize-cli model:generate —name Pets —attributes name:string,breed:string`
+9. `npx sequelize-cli model:generate --name ModelName —-attributes keyname:datatype,keyname:datatype`
 
 This will create a new model and new migration. The model is an object that allows method like .create and the migration is a set of instructions to maneuver through the database. 
 
 10. `npx sequelize-cli db:migrate`
+11. Import the sequelize model and the model that you created. 
+```js
+const Sequelize = require("sequelize")
+const { ModelName } = require("./models")
+```
 
 
 ### Summarization 
