@@ -1,0 +1,12 @@
+${header}
+<h1>THIS IS THE <strong>MOVIE LIST</strong></h1>
+<a href="/movies/new">Add a new movie</a>
+<br>
+<ul>
+    ${
+    movies.map(movie => `
+    <li>${movie.title} (${movie.year}) - ${movie.genre} ${movie.rating}/10</li>
+    `).join('')
+}
+</ul>
+${footer}
