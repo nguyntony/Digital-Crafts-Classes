@@ -1,0 +1,11 @@
+${header}
+<h1>${title}</h1>
+<a href="/members-only/dinner-ideas/new">Create a New Idea</a>
+<ul>
+    ${
+        ideas.map(idea => `
+        <li>${idea.name} <br> ingredients: ${idea.ingredients} <br> recipe: ${idea.recipe}</li>
+        `).join("")
+    }
+</ul>
+${footer}
