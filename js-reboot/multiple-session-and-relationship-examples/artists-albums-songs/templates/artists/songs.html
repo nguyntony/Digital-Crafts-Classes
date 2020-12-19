@@ -1,0 +1,19 @@
+${header}
+<h1>All songs by ${artist.name}</h1>
+
+<ul>
+  ${
+
+  songs.map(s => `
+
+  <li>
+    ${s.title}
+  </li>
+
+  `).join('')
+  
+  }
+</ul>
+
+${footer}
+

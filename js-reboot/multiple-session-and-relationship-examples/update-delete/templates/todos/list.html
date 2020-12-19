@@ -1,0 +1,18 @@
+${header}
+<h1>Todo list</h1>
+<a href="/members-only">Back</a>
+<br>
+<a href="/todos/new">Add Todo</a>
+
+<ul>
+  ${todos.map(t => `
+  <li>
+    <form method="POST" action="/todos/${t.id}/delete">
+      <a href="/todos/${t.id}/edit">${t.title}</a>      
+      <input type="submit" value="X">
+    </form>
+
+  </li>
+  `).join('')}
+  </ul>
+${footer}

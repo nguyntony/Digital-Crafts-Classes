@@ -1,0 +1,23 @@
+${header}
+
+<h1>Albums by: ${artist.name}</h1>
+<a href="/artists/">Back to Artists list</a>
+<br>
+<a href="/artists/${artist.id}/albums/new">Add new album</a>
+<ul>
+  ${
+
+  albums.map(a => `
+
+  <li>
+    <a href="/artists/${artist.id}/albums/${a.id}/songs">
+    ${a.title}
+  </li>
+
+  `).join('')
+  
+  }
+</ul>
+
+${footer}
+

@@ -1,0 +1,10 @@
+${header}
+<h1>Edit Todo</h1>
+<form method="POST" action="/todos/${todo.id}/edit">
+  <label>
+    Title:
+    <input name="title" type="text" autofocus value="${todo.title}"/>
+  </label>
+ <input type="submit" value="update!" />
+</form>
+${footer}
