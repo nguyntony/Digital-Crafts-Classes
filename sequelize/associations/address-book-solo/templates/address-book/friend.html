@@ -1,0 +1,33 @@
+${header}
+<h1>${friend.name}</h1>
+<p>${friend.address}</p>
+<p>${friend.email}</p>
+<p>${friend.phone}</p>
+
+<a href="/friend/update/${friend.id}">Update</a>
+<br>
+<br>
+<!-- <button id="delete">Delete</button> -->
+<a href="/friend/delete/${friend.id}">Delete</a>
+<br>
+<br>
+<h1>Pets</h1>
+<ul>
+    ${pets.map(p => `
+        <li>${p.name} | ${p.age} | ${p.species}</li>
+        `).join("")}
+</ul>
+<a href="/pet/create/${friend.id}">Add Pet</a>
+<br>
+<br>
+<a href="/addressbook">Return</a>
+
+<!-- <script src="./delete.js"></script> -->
+<!-- <script>
+    const delBtn = document.getElementById("delete")
+
+    delBtn.addEventListener("click", () => {
+        console.log("You clicked me")
+    })
+</script> -->
+${footer}

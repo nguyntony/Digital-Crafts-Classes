@@ -1,0 +1,10 @@
+${header}
+<h1>Address Book</h1>
+${flashMessages}
+<a href="/friend/create">Add Friend</a>
+<br/>
+<!-- include a statement where we loop through -->
+${friends.map(f => `
+    <li><a href="/friend/${f.id}">${f.name}</a></li>
+    `).join("")}
+${footer}

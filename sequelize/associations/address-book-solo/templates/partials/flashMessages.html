@@ -1,0 +1,11 @@
+${messages.error.length ? messages.error.map(e => `
+    <p><strong class="error">${e}</strong></p>
+    `).join("") : ""}
+
+${messages.success.length ? messages.success.map(e => `
+    <p><strong class="success">${e}</strong></p>
+    `).join("") : ""}
+
+${messages.alert.length ? messages.alert.map(e => `
+    <p><strong class="alert">${e}</strong></p>
+    `).join("") : ""}

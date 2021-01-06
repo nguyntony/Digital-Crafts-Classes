@@ -1,0 +1,19 @@
+${header}
+<h1>Delete Confirmation</h1>
+<p>You are attempting to delete <strong>${friend.name}</strong>. If you wish to proceed please type out their name.</p>
+
+${flashMessages}
+<form method="POST">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name">
+
+    <input type="submit" value="confirm">
+</form>
+<br>
+<br>
+<a href="/addressbook">Return</a>
+
+<button id="delete">Click me</button>
+
+<script src="/delete.js"></script>
+${footer}
