@@ -133,6 +133,17 @@ const showDelForm = async (req, res) => {
             // errMsg: req.flash("error")
             // we are passing only one argument and it understands to read the message associated with the arg.
             messages: getFlashMessages(req)
+
+            // what is going on here? 
+            // I am running a fn that will return an object, the object will return
+            // {
+            //     error: req.flash("error"),
+            //     success: req.flash("success"),
+            //     alert: req.flash("alert")
+            // }
+            // so this object is set equal to messages.
+            // when I call this fn, in the sessions file I will be able to see a attribute named flash
+            // go down to the process delte form in the else statment
         }
     })
 }
@@ -160,6 +171,16 @@ const processDelForm = async (req, res) => {
         //     }
         // })
         req.flash('error', "Your entry does not match with the friend's name. Please try again.")
+
+        // instead of writing the message like this
+        // I will need to instead wwrite it like this
+        // req.sessions.flash = { error: "Your entry does not match the friend's name" }
+        // after doing that I will need to save that and then redirect like this
+        // req.session.save(() => {
+        //     res.redirect(`/member/todo/${todoID}/delete`)
+        // })
+
+        // this will be the difference from when I am using sessions, this is the only part that needs to be changed.
         res.redirect(`/friend/delete/${friendID}`)
     }
 }
