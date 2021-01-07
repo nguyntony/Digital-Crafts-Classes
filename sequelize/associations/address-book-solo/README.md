@@ -1,4 +1,5 @@
 # Address Book Solo
+#sequelize
 - - - -
 ## Flash Messages Feature
 #### What does it require?
@@ -110,10 +111,10 @@ An example of a special method is
 - `user.createTransaction({name, amount})` OR
 ```
 const { friendID } = req.params
-    const { name, age, species } = req.body
+const { name, age, species } = req.body
 
-    const friend = await Friend.findByPk(friendID)
-    friend.createPet({ name, age, species })
+const friend = await Friend.findByPk(friendID)
+friend.createPet({ name, age, species })
 ```
 
 ### What are references?
@@ -141,3 +142,5 @@ The references will look like this. This snippet is taken out of a new column mi
 The model in the object that you set to references is the model in which the originated key comes from. In this case, FriendId is the id key of Friend in the Friends model. 
 
 It is important to note that the snippet shows the syntax of when you are creating a new column, if you do not need to create a new column, then your model should already include the attribute that you wish to set up as a reference. At this point you will just follow the references syntax. 
+
+After doing all of this, if you look on beekeeper you will now see a yellow key to signify FK in your db. 
