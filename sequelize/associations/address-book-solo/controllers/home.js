@@ -181,6 +181,13 @@ const processPetForm = async (req, res) => {
     const friend = await Friend.findByPk(friendID)
     friend.createPet({ name, age, species })
 
+    // const newPet = await Pet.create({
+    //     name, 
+    //     age,
+    //     species,
+    //     FriendId: friendID
+    // })
+
     res.redirect(`/friend/${friendID}`)
 }
 
