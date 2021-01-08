@@ -1,14 +1,17 @@
-const { layout } = require("../layout")
+const { layout, testLayout, fmsg } = require("../layout")
 const getFlashMessages = require("../messages")
 const { Friend } = require("../models")
 const { Pet } = require("../models")
 
 const home = (req, res) => {
     res.render("home", {
-        ...layout,
+        partials: {
+            ...testLayout,
+            // ...fmsg
+        },
         locals: {
             title: 'homepage ',
-            messages: getFlashMessages(req)
+            // messages: getFlashMessages(req)
         }
     })
 }
