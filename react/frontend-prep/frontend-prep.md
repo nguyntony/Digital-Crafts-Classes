@@ -62,7 +62,7 @@ It’s an object
 
 An issue that arises when using promises is that if you need to make more calls to the database or api, you will have to nest your .then statements, which can be very confusing. 
 ![](frontend-prep/then-nesting.png)
-<img src='https://github.com/nguyntony/class/blob/master/react/frontend-prep/img-notes/then-nesting.png' width='500'>
+<img src='https://github.com/nguyntony/class/blob/master/react/frontend-prep/img-notes/then-nesting.png' width='600'>
 
 #### Closure
 An inner function that accesses the outer function's variables is called a **closure**
