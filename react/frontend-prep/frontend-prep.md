@@ -56,7 +56,7 @@ It’s an object
 - it's an object that exists in one of three states (pending, fulfilled, rejected)
 
 #### What are Promises for?
-For organizing asynchronous code. 
+For organizing asynchronous code. They also act as a solution for callback hell.
 
 #### Promises translation to async/await
 * in async/await, anything that you can await means that you can use .then() if you were to use promises. 
@@ -68,12 +68,13 @@ An issue that arises when using promises is that if you need to make more calls 
 ![](frontend-prep/then-nesting.png)
 <img src='https://github.com/nguyntony/class/blob/master/react/frontend-prep/img-notes/then-nesting.png' width='600'>
 
-#### Closure
+## Closure
+#### What is it?
 An inner function that accesses the outer function's variables is called a **closure**
 ![](frontend-prep/closure.png)
 <img src='https://github.com/nguyntony/class/blob/master/react/frontend-prep/img-notes/closure.png' width='600'>
 
-Is a closure and a callback the same thing? All closures are callbacks but not all callbacks are closures. Because callbacks can be an anon fn, which anon fn and closures are not the same thing. 
+**Is a closure and a callback the same thing?** All closures are callbacks but not all callbacks are closures. Callbacks can be anon functions but anon functions and closures are not the same thing.
 
 You have to create a closure inside of the inner most .then call and you are defining an anonymous fn that uses variables defined from the outer function, that is the difference between a closure and an anon fn.
 
