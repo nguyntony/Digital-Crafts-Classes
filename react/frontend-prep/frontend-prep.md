@@ -35,6 +35,7 @@ You are able to see what is returned by going to the ‘inspect’ > ‘network�
 #### How to specify headers with fetch
 When you are using fetch, the first argument is the url and you may pass a second argument which is an object. One of the properties for that project is the ‘headers’ key which the value is also another object
 ![Fetch-Header](https://github.com/nguyntony/class/blob/master/react/frontend-prep/img-notes/fetch-header.png)
+<img src=https://github.com/nguyntony/class/blob/master/react/frontend-prep/img-notes/fetch-header.png width=450>
 
 
 ## Callback 
