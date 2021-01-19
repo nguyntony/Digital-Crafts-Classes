@@ -55,12 +55,15 @@ It’s an object
 #### Another way to describe a promise
 - it's an object that exists in one of three states (pending, fulfilled, rejected)
 
+#### What are Promises for?
+For organizing asynchronous code. 
+
 #### Promises translation to async/await
 * in async/await, anything that you can await means that you can use .then() if you were to use promises. 
 ![](frontend-prep/Screen%20Shot%202021-01-19%20at%202.25.49%20PM.png)
 ![Promise Async Await](https://github.com/nguyntony/class/blob/master/react/frontend-prep/img-notes/promise-async-await.png)
 
-An issue that arises when using promises is that if you need to make more calls to the database or api, you will have to nest your .then statements, which can be very confusing. 
+An issue that arises when using promises is that if you need to make more calls to the database or api, you will have to nest your .then statements, which can be very confusing.
 ![](frontend-prep/then-nesting.png)
 <img src='https://github.com/nguyntony/class/blob/master/react/frontend-prep/img-notes/then-nesting.png' width='600'>
 
