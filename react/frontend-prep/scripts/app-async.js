@@ -34,7 +34,7 @@ function renderJoke(joke) {
 }
 
 function main() {
-    const btn = document.querySelector("#get-joke")
+    const btn = document.querySelector("[data-js-new-joke]")
     btn.addEventListener('click', async (event) => {
         // since this is a callback fn, you are able to pass event as an argument which will be the element
         event.preventDefault();

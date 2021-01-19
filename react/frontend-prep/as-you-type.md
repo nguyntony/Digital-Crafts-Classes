@@ -10,3 +10,5 @@ We are creating an html element and selecting the element in which, where we wan
 **Note** You could have this function be async and call the above function above, but we want to modularize it so we will do step 3.
 
 3. Finally we are making another function, this one doesn't have to be async, this function will be for the button on our html page that will select the button and it will have an eventlistener. The callback fn passed as the second argument will be async because this function will make the getJoke() call which means you need to await getJoke(). After that we are going to renderJoke()
+
+4. We also created our very own attribute and we are selecting that in our main fn.
