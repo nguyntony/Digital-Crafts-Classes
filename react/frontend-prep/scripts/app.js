@@ -1,1 +1,1 @@
-console.log("hello world")
+console.log("you found a secret message!")
