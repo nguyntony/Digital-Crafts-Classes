@@ -78,4 +78,5 @@ An inner function that accesses the outer function's variables is called a **clo
 
 You have to create a closure inside of the inner most .then call and you are defining an anonymous fn that uses variables defined from the outer function, that is the difference between a closure and an anon fn.
 
-
+## Higher Order Functions 
+These fn expect to receive a fn as an argument or returns a function 
