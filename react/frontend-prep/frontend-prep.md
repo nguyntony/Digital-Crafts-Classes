@@ -13,7 +13,7 @@ This method uses python and it is acting like a server. Python has access to the
 
 #### How to use Postman
 ![](frontend-prep/Screen%20Shot%202021-01-19%20at%2012.09.29%20PM.png)
-<img src='https://github.com/nguyntony/class/blob/master/react/frontend-prep/img-notes/postman.png' width='500'>
+![Postman](https://github.com/nguyntony/class/blob/master/react/frontend-prep/img-notes/postman.png)
 1. Create a new tab
 2. Paste the url from the api into the postman url sections
 3. Click on headers
@@ -34,6 +34,7 @@ You are able to see what is returned by going to the ‘inspect’ > ‘network�
 
 #### How to specify headers with fetch
 When you are using fetch, the first argument is the url and you may pass a second argument which is an object. One of the properties for that project is the ‘headers’ key which the value is also another object
+![](frontend-prep/fetch-header.png)
 <img src='https://github.com/nguyntony/class/blob/master/react/frontend-prep/img-notes/fetch-header.png' width='500'>
 
 
@@ -51,7 +52,10 @@ It’s an object
 - with a .catch(); what you pass into the .catch() is another callback fn but the expected argument that the callback fn will receive is an error
 - for the callback fn that we pass into the .then() and .catch() we are passing anon functions in our code.
 
-
+#### Promises translation to async/await
+* in async/await, anything that you can await means that you can use .then() if you were to use promises. 
+![](frontend-prep/Screen%20Shot%202021-01-19%20at%202.25.49%20PM.png)
+![Promise Async Await](https://github.com/nguyntony/class/blob/master/react/frontend-prep/img-notes/promise-async-await.png)
 
 
 
