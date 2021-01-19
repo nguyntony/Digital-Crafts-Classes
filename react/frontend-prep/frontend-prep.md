@@ -13,7 +13,7 @@ This method uses python and it is acting like a server. Python has access to the
 
 #### How to use Postman
 ![](frontend-prep/Screen%20Shot%202021-01-19%20at%2012.09.29%20PM.png)
-![Postman]([class/postman.png at master · nguyntony/class · GitHub]https://github.com/nguyntony/class/blob/master/react/frontend-prep/img-notes/postman.png)
+![Postman](https://github.com/nguyntony/class/blob/master/react/frontend-prep/img-notes/postman.png)
 1. Create a new tab
 2. Paste the url from the api into the postman url sections
 3. Click on headers
