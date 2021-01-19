@@ -52,10 +52,25 @@ It’s an object
 - with a .catch(); what you pass into the .catch() is another callback fn but the expected argument that the callback fn will receive is an error
 - for the callback fn that we pass into the .then() and .catch() we are passing anon functions in our code.
 
+#### Another way to describe a promise
+- it's an object that exists in one of three states (pending, fulfilled, rejected)
+
 #### Promises translation to async/await
 * in async/await, anything that you can await means that you can use .then() if you were to use promises. 
 ![](frontend-prep/Screen%20Shot%202021-01-19%20at%202.25.49%20PM.png)
 ![Promise Async Await](https://github.com/nguyntony/class/blob/master/react/frontend-prep/img-notes/promise-async-await.png)
 
+An issue that arises when using promises is that if you need to make more calls to the database or api, you will have to nest your .then statements, which can be very confusing. 
+![](frontend-prep/then-nesting.png)
+<img src='https://github.com/nguyntony/class/blob/master/react/frontend-prep/img-notes/then-nesting.png' width='500'>
+
+#### Closure
+An inner function that accesses the outer function's variables is called a **closure**
+![](frontend-prep/closure.png)
+<img src='https://github.com/nguyntony/class/blob/master/react/frontend-prep/img-notes/closure.png' width='600'>
+
+Is a closure and a callback the same thing? All closures are callbacks but not all callbacks are closures. Because callbacks can be an anon fn, which anon fn and closures are not the same thing. 
+
+You have to create a closure inside of the inner most .then call and you are defining an anonymous fn that uses variables defined from the outer function, that is the difference between a closure and an anon fn.
 
 
